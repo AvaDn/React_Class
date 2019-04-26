@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+                button {
+                    font-family: 'MS Sans Serif';
+                    font-size: 11px;
+                    height: 30px;
+                    width: 30px;
+                    background-color: #BFBFBF;
+                    color: black;
+                    border-bottom: 2px solid #7B7B7B;
+                    border-left: 2px solid #ffffff;
+                    border-top: 2px solid #ffffff;
+                    border-right: 2px solid #7B7B7B;
+                    margin: 3px 1px 1px 3px;
+                    text-align: left;   
+                    
+                }
+                button:hover {
+                    background-color: lightgray;
+                    color: slategray;
+                    cursor: pointer;
+                }
+                button:active {
+                    background-color: lightgray;
+                    box-shadow: 0 5px #666;
+                    transform: translateY(4px);
+                    }
+
+                body {
+                    background-color: #fff;
+
+                    }
+                .board {
+                    background-color: lightgray;
+                    height: 320px;
+                    width: 350px;
+                    
+                    margin: 200px 200px;
+                    
+                } 
+                  
+            </style>
+            
+            
+        </head>
+        <body>
+            
+            <div class ="board">
+                    <div>
+                            <button class = "button" onclick= "returnValue(0,0,0)" >?</button> 
+                            <button class = "button" onclick= "returnValue(0,1,1)" >?</button> 
+                            <button class = "button" onclick= "returnValue(0,2,2)" >?</button> 
+                            <button class = "button" onclick= "returnValue(0,3,3)" >?</button> 
+                            <button class = "button" onclick= "returnValue(0,4,4)" >?</button> 
+                            <button class = "button" onclick= "returnValue(0,5,5)" >?</button> 
+                            <button class = "button" onclick= "returnValue(0,6,6)" >?</button> 
+                            <button class = "button" onclick= "returnValue(0,7,7)" >?</button> 
+                            <button class = "button" onclick= "returnValue(0,8,8)" >?</button>
+                    </div> 
+                    <div>
+                            <button class = "button" onclick= "returnValue(1,0,9)" >?</button> 
+                            <button class = "button" onclick= "returnValue(1,1,10)" >?</button> 
+                            <button class = "button" onclick= "returnValue(1,2,11)" >?</button> 
+                            <button class = "button" onclick= "returnValue(1,3,12)" >?</button> 
+                            <button class = "button" onclick= "returnValue(1,4,13)" >?</button> 
+                            <button class = "button" onclick= "returnValue(1,5,14)" >?</button> 
+                            <button class = "button" onclick= "returnValue(1,6,15)" >?</button> 
+                            <button class = "button" onclick= "returnValue(1,7,16)" >?</button> 
+                            <button class = "button" onclick= "returnValue(1,8,17)" >?</button>
+                    </div> 
+                    <div>
+                            <button class = "button" onclick= "returnValue(2,0,18)" >?</button> 
+                            <button class = "button" onclick= "returnValue(2,1,19)" >?</button> 
+                            <button class = "button" onclick= "returnValue(2,2,20)" >?</button> 
+                            <button class = "button" onclick= "returnValue(2,3,21)" >?</button> 
+                            <button class = "button" onclick= "returnValue(2,4,22)" >?</button> 
+                            <button class = "button" onclick= "returnValue(2,5,23)" >?</button> 
+                            <button class = "button" onclick= "returnValue(2,6,24)" >?</button> 
+                            <button class = "button" onclick= "returnValue(2,7,25)" >?</button> 
+                            <button class = "button" onclick= "returnValue(2,8,26)" >?</button>
+                    </div> 
+                    <div>
+                            <button class = "button" onclick= "returnValue(3,0,27)" >?</button> 
+                            <button class = "button" onclick= "returnValue(3,1,28)" >?</button> 
+                            <button class = "button" onclick= "returnValue(3,2,29)" >?</button> 
+                            <button class = "button" onclick= "returnValue(3,3,30)" >?</button> 
+                            <button class = "button" onclick= "returnValue(3,4,31)" >?</button> 
+                            <button class = "button" onclick= "returnValue(3,5,32)" >?</button> 
+                            <button class = "button" onclick= "returnValue(3,6,33)" >?</button> 
+                            <button class = "button" onclick= "returnValue(3,7,34)" >?</button> 
+                            <button class = "button" onclick= "returnValue(3,8,35)" >?</button>
+                    </div> 
+                    <div>
+                            <button class = "button" onclick= "returnValue(4,0,36)" >?</button> 
+                            <button class = "button" onclick= "returnValue(4,1,37)" >?</button> 
+                            <button class = "button" onclick= "returnValue(4,2,38)" >?</button> 
+                            <button class = "button" onclick= "returnValue(4,3,39)" >?</button> 
+                            <button class = "button" onclick= "returnValue(4,4,40)" >?</button> 
+                            <button class = "button" onclick= "returnValue(4,5,41)" >?</button> 
+                            <button class = "button" onclick= "returnValue(4,6,42)" >?</button> 
+                            <button class = "button" onclick= "returnValue(4,7,43)" >?</button> 
+                            <button class = "button" onclick= "returnValue(4,8,44)" >?</button>
+                    </div> 
+                    <div>
+                            <button class = "button" onclick= "returnValue(5,0,45)" >?</button> 
+                            <button class = "button" onclick= "returnValue(5,1,46)" >?</button> 
+                            <button class = "button" onclick= "returnValue(5,2,47)" >?</button> 
+                            <button class = "button" onclick= "returnValue(5,3,48)" >?</button> 
+                            <button class = "button" onclick= "returnValue(5,4,49)" >?</button> 
+                            <button class = "button" onclick= "returnValue(5,5,50)" >?</button> 
+                            <button class = "button" onclick= "returnValue(5,6,51)" >?</button> 
+                            <button class = "button" onclick= "returnValue(5,7,52)" >?</button> 
+                            <button class = "button" onclick= "returnValue(5,8,53)" >?</button>
+                    </div> 
+                    <div>
+                            <button class = "button" onclick= "returnValue(6,0,54)" >?</button> 
+                            <button class = "button" onclick= "returnValue(6,1,55)" >?</button> 
+                            <button class = "button" onclick= "returnValue(6,2,56)" >?</button> 
+                            <button class = "button" onclick= "returnValue(6,3,57)" >?</button> 
+                            <button class = "button" onclick= "returnValue(6,4,58)" >?</button> 
+                            <button class = "button" onclick= "returnValue(6,5,59)" >?</button> 
+                            <button class = "button" onclick= "returnValue(6,6,60)" >?</button> 
+                            <button class = "button" onclick= "returnValue(6,7,61)" >?</button> 
+                            <button class = "button" onclick= "returnValue(6,8,62)" >?</button>
+                    </div> 
+                    <div>
+                            <button class = "button" onclick= "returnValue(7,0,63)" >?</button> 
+                            <button class = "button" onclick= "returnValue(7,1,64)" >?</button> 
+                            <button class = "button" onclick= "returnValue(7,2,65)" >?</button> 
+                            <button class = "button" onclick= "returnValue(7,3,66)" >?</button> 
+                            <button class = "button" onclick= "returnValue(7,4,67)" >?</button> 
+                            <button class = "button" onclick= "returnValue(7,5,68)" >?</button> 
+                            <button class = "button" onclick= "returnValue(7,6,69)" >?</button> 
+                            <button class = "button" onclick= "returnValue(7,7,70)" >?</button> 
+                            <button class = "button" onclick= "returnValue(7,8,71)" >?</button>
+                    </div> 
+                    <div>
+                            <button class = "button" onclick= "returnValue(8,0,72)" >?</button> 
+                            <button class = "button" onclick= "returnValue(8,1,73)" >?</button> 
+                            <button class = "button" onclick= "returnValue(8,2,74)" >?</button> 
+                            <button class = "button" onclick= "returnValue(8,3,75)" >?</button> 
+                            <button class = "button" onclick= "returnValue(8,4,76)" >?</button> 
+                            <button class = "button" onclick= "returnValue(8,5,77)" >?</button> 
+                            <button class = "button" onclick= "returnValue(8,6,78)" >?</button> 
+                            <button class = "button" onclick= "returnValue(8,7,79)" >?</button> 
+                            <button class = "button" onclick= "returnValue(8,8,80)" >?</button>
+                    </div> 
+                   
+            </div>
+
+            <script>
+                var board = [
+                    [
+                        0, 0, 0, 0, 0, 0, 0, 0, 0
+                    ],[
+                        0, 0, 0, 0, 0, 0, 0, 0, 0
+                    ],[
+                        0, 0, 0, 0, 0, 0, 0, 0, 0
+                    ],[
+                        0, 0, 0, 0, 0, 0, 0, 0, 0
+                    ],[
+                        0, 0, 0, 0, 0, 0, 0, 0, 0
+                    ],[
+                        0, 0, 0, 0, 0, 0, 0, 0, 0
+                    ],[
+                        0, 0, 0, 0, 0, 0, 0, 0, 0
+                    ],[
+                        0, 0, 0, 0, 0, 0, 0, 0, 0
+                    ],[
+                        0, 0, 0, 0, 0, 0, 0, 0, 0
+                    ]
+                ]
+                
+                var n = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+                var m = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+                console.log('board1::::',board);
+                for (i=0; i< 9; i++){
+                    n[i]= Math.floor(Math.random() * 9);
+                    console.log('n::::',n[i])
+                    m[i]= Math.floor(Math.random() * 9);
+                    console.log('m::::',m[i])
+                }
+                
+                for (i=0; i<9; i++){
+                    var x=n[i];
+                    var y=m[i];
+                    board[x][y]= 50;
+                    
+                }
+                
+                for (i=0; i<9; i++){
+                    for (j=0; j<9; j++){
+                        if (board[i][j]==0){
+                            board[i][j]=2;
+
+                        } 
+                        if (board[i][j]==50){
+                            board[i][j]=0;
+
+                        } 
+                    }
+                }
+                for (i=0; i<9; i++){
+                    for (j=0; j<9; j++){
+                        if (board[i][j]==2){
+                            board[i][j]=50;
+                            
+
+                        } 
+                        
+                    }
+                }
+                //Now bombs are 0 and none bombs are 50.
+
+                if (board [0][0]==50){
+                    var k=0;
+                    if (board [0][1]==0){
+                    k++;
+                    }
+                    if (board [1][0]==0){
+                    k++;
+                    }
+                    if (board [1][1]==0){
+                    k++;
+                    }
+                    if (k != 0){
+                        board [0][0]=k;
+                    }
+                    if (k==0){
+                        board [0][0]=100;
+                    }
+                }
+                
+                if (board [0][8]==50){
+                    var k=0;
+                    if (board [0][7]==0){
+                    k++;
+                    }
+                    if (board [1][8]==0){
+                    k++;
+                    }
+                    if (board [1][7]==0){
+                    k++;
+                    }
+                    if (k != 0){
+                        board [0][8]=k;
+                    }
+                    if (k==0){
+                        board [0][8]=100;
+                    }
+                    
+                
+                }
+                if (board [8][0]==50){
+                    var k=0;
+                    if (board [7][0]==0){
+                    k++;
+                    }
+                    if (board [8][1]==0){
+                    k++;
+                    }
+                    if (board [7][1]==0){
+                    k++;
+                    }
+                    if (k != 0){
+                        board [8][0]=k;
+                    }
+                    if (k==0){
+                        board [8][0]=100;
+                    }
+                    
+                
+                }
+                if (board [8][8]==50){
+                    var k=0;
+                    if (board [8][7]==0){
+                    k++;
+                    }
+                    if (board [7][8]==0){
+                    k++;
+                    }
+                    if (board [7][7]==0){
+                    k++;
+                    }
+                    if (k != 0){
+                        board [8][8]=k;
+                    }
+                    if (k==0){
+                        board [8][8]=100;
+                    }
+
+                }
+
+                for (i=1; i<8; i++){
+                    if (board [0][i]==50){
+                        var k=0;
+                        if (board [0][i-1]==0){
+                            k++;
+                        }
+                        if (board [1][i-1]==0){
+                            k++;
+                        }
+                        if (board [1][i]==0){
+                            k++;
+                        }
+                        if (board [1][i+1]==0){
+                            k++;
+                        }
+                        if (board [0][i+1]==0){
+                            k++;
+                        }
+                        
+                        if (k != 0){
+                            board [0][i]=k;
+                        }
+                        if (k==0){
+                            board [0][i]=100;
+                        }
+                    }
+
+                }
+                for (i=1; i<8; i++){
+                    if (board [i][0]==50){
+                        var k=0;
+                        if (board [i-1][0]==0){
+                            k++;
+                        }
+                        if (board [i-1][1]==0){
+                            k++;
+                        }
+                        if (board [i][1]==0){
+                            k++;
+                        }
+                        if (board [i+1][1]==0){
+                            k++;
+                        }
+                        if (board [i+1][0]==0){
+                            k++;
+                        }
+                        
+                        if (k != 0){
+                            board [i][0]=k;
+                        }
+                        if (k==0){
+                            board [i][0]=100;
+                        }
+                    }
+
+                }
+                for (i=1; i<8; i++){
+                    if (board [8][i]==50){
+                        var k=0;
+                        if (board [8][i-1]==0){
+                            k++;
+                        }
+                        if (board [7][i-1]==0){
+                            k++;
+                        }
+                        if (board [7][i]==0){
+                            k++;
+                        }
+                        if (board [7][i+1]==0){
+                            k++;
+                        }
+                        if (board [8][i+1]==0){
+                            k++;
+                        }
+                        
+                        if (k != 0){
+                            board [8][i]=k;
+                        }
+                        if (k==0){
+                            board [8][i]=100;
+                        }
+                    }
+
+                }
+                for (i=1; i<8; i++){
+                    if (board [i][8]==50){
+                        var k=0;
+                        if (board [i-1][8]==0){
+                            k++;
+                        }
+                        if (board [i-1][7]==0){
+                            k++;
+                        }
+                        if (board [i][7]==0){
+                            k++;
+                        }
+                        if (board [i+1][7]==0){
+                            k++;
+                        }
+                        if (board [i+1][8]==0){
+                            k++;
+                        }
+                        
+                        if (k != 0){
+                            board [i][8]=k;
+                        }
+                        if (k==0){
+                            board [i][8]=100;
+                        }
+                    }
+
+                }
+                for (i=1; i<8; i++){
+                    for (j=1; j<8; j++){
+                        if (board [i][j]==50){
+                            var k=0;
+                            if (board [i-1][j-1]==0){
+                            k++;
+                            }
+                            if (board [i-1][j]==0){
+                            k++;
+                            }
+                            if (board [i-1][j+1]==0){
+                            k++;
+                            }
+                            if (board [i][j-1]==0){
+                            k++;
+                            }
+                            if (board [i][j+1]==0){
+                            k++;
+                            }
+                            if (board [i+1][j-1]==0){
+                            k++;
+                            }
+                            if (board [i+1][j]==0){
+                            k++;
+                            }
+                            if (board [i+1][j+1]==0){
+                            k++;
+                            }
+                            
+                            if (k != 0){
+                                board [i][j]=k;
+                            }
+                            if (k==0){
+                                board [i][j]=100;
+                            }
+                        }
+                    }
+                }
+                //Now if a cell isn't near any bombs its value is 100,
+                //if not it's value is the number of bombs nearby,
+                //bombs are still 0.
+                
+                var x;
+                function returnValue (i,j,n) {
+                     
+                    x=document.getElementsByClassName("button");
+                    if(board[i][j] != 0 && board[i][j] != 100){
+                        x[n].innerText  = board[i][j];
+                        //how many bombs are near by
+                    }
+                    if(board[i][j]==100){
+                        x[n].innerText="0";
+                        //nobombs
+                    }
+                    if(board[i][j]==0){
+                        x[n].innerText="B!";
+                        //bomb!
+                    }
+ 
+
+                }
+                
+            </script>   
+
+        </body>
+
+
+    </html>
